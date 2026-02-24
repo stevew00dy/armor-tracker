@@ -254,11 +254,6 @@ function ArmorCard({
               </span>
             )}
           </div>
-          <div className="absolute bottom-2 right-2">
-            <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-dark-900/80 text-accent-amber backdrop-blur-sm">
-              {armor.value}
-            </span>
-          </div>
           <button
             onClick={onToggleFav}
             className="absolute top-2 right-2 w-8 h-8 rounded-full bg-dark-900/60 backdrop-blur-sm flex items-center justify-center transition-all hover:bg-dark-900/80"
@@ -305,11 +300,6 @@ function ArmorCard({
           </div>
         </div>
 
-        {!armor.image && (
-          <span className="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-dark-800 text-accent-amber">
-            {armor.value}
-          </span>
-        )}
 
         {/* Location toggle */}
         <button
