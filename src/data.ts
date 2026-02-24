@@ -147,7 +147,7 @@ export const armors: ArmorSet[] = [
     ],
     variants: ["Gilded"],
     variantNote: "Gilded: core, arms, legs only; no Gilded helmet.",
-    image: null,
+    image: "armor-images/overlord-gilded.png",
     rare: true,
   },
   {
