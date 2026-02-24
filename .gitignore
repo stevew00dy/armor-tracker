@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / deps
+dist/
+node_modules/
+.vite/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
