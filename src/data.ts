@@ -54,7 +54,7 @@ export const armors: ArmorSet[] = [
     ],
     variants: ["Windfall"],
     variantNote: "Core + legs; helmet often mixed with other sets.",
-    image: null,
+    image: "armor-images/carnifex.png",
     rare: true,
   },
   {
@@ -73,7 +73,7 @@ export const armors: ArmorSet[] = [
       { slot: "Backpack", item: "Morozov-CH Backpack Pyrotechnic" },
     ],
     variants: ["Horizon", "Iceflow", "Gold Horizon", "Lifeforce"],
-    image: null,
+    image: "armor-images/morozov.png",
     rare: true,
   },
   {
@@ -92,7 +92,7 @@ export const armors: ArmorSet[] = [
       { slot: "Backpack", item: "Geist Backpack ASD Edition" },
     ],
     variants: ["ASD", "Snow Camo", "Golden Blossom", "Desert", "Forest", "Rogue", "Whiteout"],
-    image: null,
+    image: "armor-images/geist-asd.png",
     rare: true,
   },
   {
@@ -128,7 +128,7 @@ export const armors: ArmorSet[] = [
       { slot: "Legs", item: "Antium Armor Legs" },
     ],
     variants: ["Default", "Storm", "Maroon", "Moss Camo", "Sand", "Core Jet", "Midnight Sun"],
-    image: null,
+    image: "armor-images/antium.png",
     rare: true,
   },
   {
@@ -165,7 +165,7 @@ export const armors: ArmorSet[] = [
       { slot: "Legs", item: "Citadel-SE Legs White" },
     ],
     variants: ["White", "Dark Green", "Maroon", "Base"],
-    image: null,
+    image: "armor-images/citadel-se-white.png",
     rare: true,
   },
 ];
