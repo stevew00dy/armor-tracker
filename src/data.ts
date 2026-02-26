@@ -79,7 +79,7 @@ export const armors: ArmorSet[] = [
   },
   {
     id: "morozov-pyrotechnic",
-    name: "Morozov Pyrotechnic (SH-I)",
+    name: "Morozov SH-I",
     type: "Heavy",
     manufacturer: "Roussimoff",
     where: "Checkmate Station CZ boss or ASD facilities",
@@ -92,7 +92,7 @@ export const armors: ArmorSet[] = [
       { slot: "Legs", item: "Morozov-SH-I Legs Pyrotechnic" },
       { slot: "Backpack", item: "Morozov-CH Backpack Pyrotechnic Horizon" },
     ],
-    variants: ["Pyrotechnic", "Lifeforce", "Gideon", "Horizon", "Iceflow", "Smokescreen", "Spite", "Spitfire", "Terrene", "Vesper"],
+    variants: ["Pyrotechnic", "Lifeforce", "Gideon", "Pyrotechnic Horizon", "Iceflow", "Smokescreen", "Spite", "Spitfire", "Terrene", "Vesper"],
     variantNote: "Pyrotechnic, Lifeforce, and Gideon have full sets. Horizon, Iceflow, Smokescreen, Spite, Spitfire, Terrene, Vesper are helmet color sub-variants.",
     image: "armor-images/morozov-pyrotechnic.png",
     rare: true,
