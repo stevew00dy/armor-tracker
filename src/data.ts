@@ -17,7 +17,7 @@ export const armors: ArmorSet[] = [
       { slot: "Legs", item: "Palatino Legs" },
     ],
     variants: ["Mark I", "Daystar", "Moonfall", "Sunstone", "Metropolis", "Necropolis", "Deadlock"],
-    image: "armor-images/palatino.jpg",
+    image: "armor-images/palatino.png",
     rare: true,
   },
   {
