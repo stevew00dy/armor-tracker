@@ -15,12 +15,36 @@ function saveJson<T>(key: string, value: T) {
   localStorage.setItem(key, JSON.stringify(value));
 }
 
+const VARIANT_RENAMES: Record<string, string> = {
+  "Iceflow": "Pyrotechnic Iceflow",
+  "Spitfire": "Pyrotechnic Spitfire",
+};
+
+function migrateChecks(raw: CheckedState): CheckedState {
+  let changed = false;
+  const out: CheckedState = {};
+  for (const [k, v] of Object.entries(raw)) {
+    let key = k;
+    for (const [old, renamed] of Object.entries(VARIANT_RENAMES)) {
+      const prefix = `morozov-sh::${old}::`;
+      if (k.startsWith(prefix)) {
+        key = k.replace(prefix, `morozov-sh::${renamed}::`);
+        changed = true;
+        break;
+      }
+    }
+    out[key] = v;
+  }
+  if (changed) saveJson("armor-tracker-checks", out);
+  return out;
+}
+
 /**
  * Tracks which individual armor pieces are checked (owned).
  * Key format: `${armorId}::${variant}::${slot}`
  */
 export function useArmorChecks(storageKey = "armor-tracker-checks") {
-  const [checks, setChecks] = useState<CheckedState>(() => loadJson(storageKey, {}));
+  const [checks, setChecks] = useState<CheckedState>(() => migrateChecks(loadJson(storageKey, {})));
 
   const toggle = useCallback(
     (armorId: string, variant: string, slot: string) => {

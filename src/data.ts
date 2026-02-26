@@ -72,7 +72,7 @@ export const armors: ArmorSet[] = [
       { slot: "Legs", item: "Morozov-SH-I Legs" },
       { slot: "Backpack", item: "Morozov-CH Backpack" },
     ],
-    variants: ["Pyrotechnic", "Pyrotechnic Horizon", "Scorched", "Iceflow", "Spitfire", "Vesper"],
+    variants: ["Pyrotechnic", "Pyrotechnic Horizon", "Pyrotechnic Iceflow", "Pyrotechnic Spitfire", "Scorched", "Vesper"],
     variantNote: "Pyrotechnic has a full set. Scorched uses SH-S helmet model. Iceflow, Spitfire, Vesper are helmet color sub-variants.",
     image: "armor-images/morozov-pyrotechnic.png",
     rare: true,
