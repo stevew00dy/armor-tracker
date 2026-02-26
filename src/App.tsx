@@ -54,7 +54,7 @@ function Header({
 
   return (
     <header className="border-b border-dark-700 bg-dark-900/80 backdrop-blur-sm sticky top-0 z-50">
-      <div className="max-w-[1400px] mx-auto px-4 py-4 flex items-center justify-between gap-4 flex-wrap">
+      <div className="max-w-[1600px] mx-auto px-4 py-4 flex items-center justify-between gap-4 flex-wrap">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-lg bg-accent-amber/20 flex items-center justify-center">
             <Shield className="w-5 h-5 text-accent-amber" />
@@ -469,7 +469,7 @@ export default function App() {
     <div className="min-h-screen">
       <Header owned={checks.totalProgress.owned} total={checks.totalProgress.total} onReset={handleReset} />
 
-      <main className="max-w-[1400px] mx-auto px-4 py-6 space-y-6">
+      <main className="max-w-[1600px] mx-auto px-4 py-6 space-y-6">
         {/* Search + Filters */}
         <div className="flex flex-col sm:flex-row gap-3">
           <div className="relative flex-1">
