@@ -59,7 +59,7 @@ export const armors: ArmorSet[] = [
   },
   {
     id: "morozov-shi",
-    name: "Morozov SH",
+    name: "Morozov SH-",
     type: "Heavy",
     manufacturer: "Roussimoff",
     where: "Checkmate Station CZ boss or ASD facilities",
