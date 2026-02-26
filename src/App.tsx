@@ -196,11 +196,13 @@ function ArmorCard({
   checks,
   isFav,
   onToggleFav,
+  onImageClick,
 }: {
   armor: ArmorSet;
   checks: ReturnType<typeof useArmorChecks>;
   isFav: boolean;
   onToggleFav: () => void;
+  onImageClick?: (src: string, alt: string) => void;
 }) {
   const [locationOpen, setLocationOpen] = useState(false);
   const [variantsOpen, setVariantsOpen] = useState(true);
@@ -238,7 +240,8 @@ function ArmorCard({
           <img
             src={`${base}${armor.image}`}
             alt={armor.name}
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-top cursor-pointer hover:scale-105 transition-transform duration-300"
+            onClick={() => onImageClick?.(`${base}${armor.image}`, armor.name)}
             onError={(e) => {
               (e.target as HTMLImageElement).style.display = "none";
             }}
@@ -439,6 +442,7 @@ export default function App() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<FilterType>("All");
   const [showFavsOnly, setShowFavsOnly] = useState(false);
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   const handleReset = useCallback(() => {
     checks.resetAll();
@@ -525,6 +529,7 @@ export default function App() {
               checks={checks}
               isFav={favourites.isFav(armor.id)}
               onToggleFav={() => favourites.toggle(armor.id)}
+              onImageClick={(src, alt) => setLightbox({ src, alt })}
             />
           ))}
         </div>
@@ -537,6 +542,26 @@ export default function App() {
       </main>
 
       <Footer />
+
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 cursor-pointer"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            onClick={() => setLightbox(null)}
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-dark-900/80 border border-dark-700 flex items-center justify-center text-text-dim hover:text-text hover:border-dark-600 transition-colors z-10"
+          >
+            <X className="w-5 h-5" />
+          </button>
+          <img
+            src={lightbox.src}
+            alt={lightbox.alt}
+            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl cursor-default"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 }
