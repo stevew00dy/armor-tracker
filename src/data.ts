@@ -94,7 +94,7 @@ export const armors: ArmorSet[] = [
     ],
     variants: ["Pyrotechnic", "Lifeforce", "Gideon", "Horizon", "Iceflow", "Smokescreen", "Spite", "Spitfire", "Terrene", "Vesper"],
     variantNote: "Pyrotechnic, Lifeforce, and Gideon have full sets. Horizon, Iceflow, Smokescreen, Spite, Spitfire, Terrene, Vesper are helmet color sub-variants.",
-    image: "armor-images/morozov.png",
+    image: "armor-images/morozov-pyrotechnic.png",
     rare: true,
   },
   {
